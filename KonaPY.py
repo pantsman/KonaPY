@@ -64,9 +64,6 @@ if __name__ == "__main__":
 
     outputDirectory = generateFolder(outputDirectory)
 
-    print(outputDirectory)
-    input('hold')
-
     while True:
         konaRequest = requests.get('{0}{1}&page={2}'.format(baseUrl,baseTags,page))
         if konaRequest.status_code != 200:
