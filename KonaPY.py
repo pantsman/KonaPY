@@ -102,7 +102,6 @@ if __name__ == "__main__":
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--heal', action='store_true')
     group.add_argument('--download', action='store_true')
-    group.add_argument('--delewd', action='store_true')
 
     args = parser.parse_args()
 
@@ -112,5 +111,3 @@ if __name__ == "__main__":
         healDirectory(outputDirectory, args.tags)
     elif args.download == True:
         downloadImages(outputDirectory, args.ratings, args.tags)
-    elif args.delewd == True:
-        delewd()  
